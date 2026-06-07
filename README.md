@@ -9,8 +9,8 @@ Este proyecto busca optimizar el triaje y disminuir la fatiga de alertas en cent
 ## Estructura del Repositorio
 * `data/raw/`: Contiene el dataset original (excluido del control de versiones por volumen).
 * `notebooks/`: Aloja el código fuente y el flujo reproducible del análisis exploratorio (`F1_Definicion.ipynb`).
-* `docs/`: Documentación técnica y diagramas de flujo.
-* `src/`: (Proyección) Scripts de funciones modulares.
+* `docs/`: Documentación técnica.
+* `src/`: Scripts de funciones modulares.
 
 ## Instrucciones de Reproducción
 Para ejecutar este proyecto garantizando los mismos resultados de entorno, sigue estos pasos en tu terminal:
