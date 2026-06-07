@@ -1,0 +1,12 @@
+# Entornos virtuales
+.venv/
+
+# Datos masivos
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+# Archivos temporales de Jupyter
+.ipynb_checkpoints/
