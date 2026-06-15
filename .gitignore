@@ -3,6 +3,7 @@
 
 # Datos masivos
 data/raw/*
+!data/raw/cybersecurity_threat_detection_logs_muestra_500k.csv
 !data/raw/.gitkeep
 
 data/processed/*
