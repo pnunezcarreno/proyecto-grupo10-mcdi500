@@ -33,6 +33,10 @@ cd proyecto-grupo10-mcdi500
 * **IMPORTANTE:** El archivo descargado debe ser almacenado exclusivamente en el directorio `data/raw/`.
 
 * Alternativa: Se dispone de script de descarga del dataset crudo desde repositorio de Google Drive y lo almacena directamente en el directorio `data/raw/`. El script se encuentra en `src/dataset_raw_downloader.py`
+* **IMPORTANTE:** Para ejecutar el script `src/dataset_raw_downloader.py` es necesario instalar previamente la libreria `gdown`:
+```bash
+pip install gdown
+```
 
 * Opcional: Tambien se dispone de script que genera una muestra a partir del dataset original en `data/raw/`. El script se encuentra en `src/generar_muestra.py`
 * **IMPORTANTE:** Dentro del script hay una variable llamada `numero_muestras` la cual controla cuantos registros se extraeran del dataset crudo.
