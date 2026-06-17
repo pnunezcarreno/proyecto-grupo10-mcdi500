@@ -69,5 +69,13 @@ pip install -r requirements.txt
 3. Ejecuta el *notebook* de Fase 2 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
 4. Ejecuta el *notebook* Fase 3 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
 5. El notebook orquestador `F3_Algoritmos.ipynb` consume el dataset procesado desde `data/processed/`, realizando una transformación estructural a listas nativas de Python para ejecutar y comparar el rendimiento de algoritmos de ordenamiento (iterativo $O(n^2)$ vs. recursivo $O(n \log n)$) mediante la clase AnalizadorAlertas definida en `F3/src/motor_analisis.py`.
+
+
+## Ejecución de la Fase 3  (Diseño algorítmico, Complejidad y Programación Orientada a Objetos)
+1. Con el entorno virtual activado, inicia Jupyter Notebook.
+2. Abre el archivo ubicado en la ruta `F3/F3_Algoritmos-POO.ipynb`.
+4. Ejecuta el *notebook* Fase 3 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
+5. El notebook orquestador `F3/F3_Algoritmos-POO.ipynb` consume el dataset crudo o la muestra desde `data/raw/`, ejecutando los pasos de la Fase 2 (tratamiento de nulos, escalamiento Min-Max, codificación *One-Hot* y *Label Encoding*) bajo el paradigma de la Programacion Orientada a Objetos mediante las clases definidas en `F3/src/preprocesamiento.py`, para ejecutar y comparar el rendimiento de algoritmos de ordenamiento (iterativo $O(n^2)$ vs. recursivo $O(n \log n)$) mediante la clase AnalizadorAlertas definida en `F3/src/motor_analisis.py`.
+
    
 > **Nota técnica:** Cada decisión algorítmica y transformación de variables se encuentra estrictamente documentada y justificada en las celdas Markdown del propio *notebook*.
