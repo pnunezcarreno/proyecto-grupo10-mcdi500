@@ -7,10 +7,11 @@
 Este proyecto busca optimizar el triaje y disminuir la fatiga de alertas en centros de operaciones de seguridad (SOC). Mediante el ecosistema científico de Python, se analiza un conjunto masivo de aproximadamente 6 millones de logs de red para aislar el ruido estadístico de los verdaderos indicadores de compromiso.
 
 ## Estructura del Repositorio
-* `data/raw/`: Contiene el dataset original de logs de red (excluido del control de versiones por volumen).
+* `data/raw/`: Contiene una muestra del dataset original de logs de red (excluido del control de versiones por volumen).
 * `data/processed/`: Directorio de destino para el dataset limpio, codificado y optimizado tras la Fase 2 (excluido del control de versiones).
 * `notebooks/`: Aloja el código fuente y el flujo reproducible del análisis exploratorio inicial (`F1_Definicion.ipynb`).
 * `F2/`: Directorio exclusivo para la Fase 2. Contiene el *notebook* ejecutable (`F2_Preprocesamiento.ipynb`) con el *pipeline* de limpieza exhaustiva y normalización.
+* `F3/`: Directorio exclusivo para la Fase 3. Contiene el *notebook* ejecutable (`F3_Algoritmos.ipynb`) con el *pipeline* de diseño algoritmico y medición de complejidad.
 * `docs/`: Documentación técnica y reportes formales.
 * `src/`: Scripts de funciones modulares.
 
@@ -24,8 +25,17 @@ cd proyecto-grupo10-mcdi500
 ```
 
 ### 2. Descargar el dataset crudo:
-* Enlace: [https://www.kaggle.com/datasets/aryan208/cybersecurity-threat-detection-logs/data](https://www.kaggle.com/datasets/aryan208/cybersecurity-threat-detection-logs/data)
+* Dentro de el directorio  `data/raw/` está presente una muestra del dataset original con 500.000 registros, el cual servirá para probar el funcionamiento de los notebooks.
+
+**Recomendación:** Para analizar en profundidad este caso, se recomienda descargar el dataset original:
+
+* Enlace dataset original: [https://www.kaggle.com/datasets/aryan208/cybersecurity-threat-detection-logs/data](https://www.kaggle.com/datasets/aryan208/cybersecurity-threat-detection-logs/data)
 * **IMPORTANTE:** El archivo descargado debe ser almacenado exclusivamente en el directorio `data/raw/`.
+
+* Alternativa: Se dispone de script de descarga del dataset crudo desde repositorio de Google Drive y lo almacena directamente en el directorio `data/raw/`. El script se encuentra en `src/dataset_raw_downloader.py`
+
+* Opcional: Tambien se dispone de script que genera una muestra a partir del dataset original en `data/raw/`. El script se encuentra en `src/generar_muestra.py`
+* **IMPORTANTE:** Dentro del script hay una variable llamada `numero_muestras` la cual controla cuantos registros se extraeran del dataset crudo.
 
 ### 3. Crear y activar el entorno virtual:
 ```bash
