@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Ajustar numero de muestras a extraer
-numero_muestras = 100000
+numero_muestras = 500000
 
 # Ajusta el nombre del archivo raw original según como lo tengas en tu equipo
 ruta_raw_original = '../data/raw/cybersecurity_threat_detection_logs.csv' 
