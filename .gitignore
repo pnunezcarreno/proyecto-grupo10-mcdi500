@@ -11,3 +11,7 @@ data/processed/*
 
 # Archivos temporales de Jupyter
 .ipynb_checkpoints/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
