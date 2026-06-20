@@ -12,6 +12,7 @@ Este proyecto busca optimizar el triaje y disminuir la fatiga de alertas en cent
 * `notebooks/`: Aloja el código fuente y el flujo reproducible del análisis exploratorio inicial (`F1_Definicion.ipynb`).
 * `F2/`: Directorio exclusivo para la Fase 2. Contiene el *notebook* ejecutable (`F2_Preprocesamiento.ipynb`) con el *pipeline* de limpieza exhaustiva y normalización.
 * `F3/`: Directorio exclusivo para la Fase 3. Contiene el *notebook* ejecutable (`F3_Algoritmos.ipynb`) con el *pipeline* de diseño algoritmico y medición de complejidad.
+* `F4/`: Directorio exclusivo para la Fase 4. Contiene el *notebook* ejecutable (`F4_Visualizacion.ipynb`) con el *pipeline* que concentra lo visto en F1 (Definición), F2 (Limpieza y transformación), F3 (Diseño algoritmico y POO), finalizando en la F4 dedicado a la comunicación e interpretación visual de resultados.
 * `docs/`: Documentación técnica y reportes formales.
 * `src/`: Scripts de funciones modulares.
 
@@ -66,16 +67,21 @@ pip install -r requirements.txt
 ## Ejecución de la Fase 3  (Diseño Algorítmico y Complejidad)
 1. Con el entorno virtual activado, inicia Jupyter Notebook.
 2. Abre el archivo ubicado en la ruta `F3/Algoritmos.ipynb`.
-3. Ejecuta el *notebook* de Fase 2 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
-4. Ejecuta el *notebook* Fase 3 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
-5. El notebook orquestador `F3_Algoritmos.ipynb` consume el dataset procesado desde `data/processed/`, realizando una transformación estructural a listas nativas de Python para ejecutar y comparar el rendimiento de algoritmos de ordenamiento (iterativo $O(n^2)$ vs. recursivo $O(n \log n)$) mediante la clase AnalizadorAlertas definida en `F3/src/motor_analisis.py`.
+3. Ejecuta el *notebook* Fase 3 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
+4. El notebook orquestador `F3_Algoritmos.ipynb` consume el dataset procesado desde `data/processed/`, realizando una transformación estructural a listas nativas de Python para ejecutar y comparar el rendimiento de algoritmos de ordenamiento (iterativo $O(n^2)$ vs. recursivo $O(n \log n)$) mediante la clase AnalizadorAlertas definida en `F3/src/motor_analisis.py`.
 
 
 ## Ejecución de la Fase 3  (Diseño algorítmico, Complejidad y Programación Orientada a Objetos)
 1. Con el entorno virtual activado, inicia Jupyter Notebook.
 2. Abre el archivo ubicado en la ruta `F3/F3_Algoritmos-POO.ipynb`.
-4. Ejecuta el *notebook* Fase 3 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
-5. El notebook orquestador `F3/F3_Algoritmos-POO.ipynb` consume el dataset crudo o la muestra desde `data/raw/`, ejecutando los pasos de la Fase 2 (tratamiento de nulos, escalamiento Min-Max, codificación *One-Hot* y *Label Encoding*) bajo el paradigma de la Programacion Orientada a Objetos mediante las clases definidas en `F3/src/preprocesamiento.py`, para ejecutar y comparar el rendimiento de algoritmos de ordenamiento (iterativo $O(n^2)$ vs. recursivo $O(n \log n)$) mediante la clase AnalizadorAlertas definida en `F3/src/motor_analisis.py`.
+3. Ejecuta el *notebook* Fase 3 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
+4. El notebook orquestador `F3/F3_Algoritmos-POO.ipynb` consume el dataset crudo o la muestra desde `data/raw/`, ejecutando los pasos de la Fase 2 (tratamiento de nulos, escalamiento Min-Max, codificación *One-Hot* y *Label Encoding*) bajo el paradigma de la Programacion Orientada a Objetos mediante las clases definidas en `F3/src/preprocesamiento.py`, para ejecutar y comparar el rendimiento de algoritmos de ordenamiento (iterativo $O(n^2)$ vs. recursivo $O(n \log n)$) mediante la clase AnalizadorAlertas definida en `F3/src/motor_analisis.py`.
+
+## Ejecución de la Fase 4  (Visualización y comunicación de resultados)
+1. Con el entorno virtual activado, inicia Jupyter Notebook.
+2. Abre el archivo ubicado en la ruta `F4/F4_Visualizacion.ipynb`.
+3. Ejecuta el *notebook* Fase 4 de forma secuencial (o utilizando `Restart Kernel and Run All Cells`).
+4. El notebook orquestador `F4/F4_Visualizacion.ipynb` consume el dataset crudo o la muestra desde `data/raw/`, ejecutando los pasos de la Fase 2 (tratamiento de nulos, escalamiento Min-Max, codificación One-Hot y Label Encoding) bajo el paradigma de la Programación Orientada a Objetos mediante las clases definidas en `F4/src/preprocesamiento.py`, y evalúa el rendimiento algorítmico mediante la clase AnalizadorAlertas (`F4/src/motor_analisis.py`), culminando con la generación de visualizaciones analíticas en `matplotlib` para interpretar la complejidad asintótica y los patrones tácticos de las amenazas.
 
    
 > **Nota técnica:** Cada decisión algorítmica y transformación de variables se encuentra estrictamente documentada y justificada en las celdas Markdown del propio *notebook*.
